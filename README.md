@@ -1,17 +1,14 @@
-# my_sdk_flutter_plugin
+# Halo Dot SDK for Flutter — Quick Exploration
 
-A new Flutter project.
+A small Flutter project for exploring how to use the Halo Dot SDK in a Flutter app.
 
-## Getting Started
+The app is a hands-on experiment around a simple payment flow: browse items loaded from demo data, add items to a shared cart, review the total, optionally override the price, and try the payment flow.
 
-This project is a starting point for a Flutter application.
+This is a learning project focused on trying out the SDK and keeping the app structure straightforward. It is not intended to be a production-ready payment application.
 
-A few resources to get you started if this is your first Flutter project:
+## Running the project
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Open the project in Flutter tooling and run it on a supported device. Follow the Halo Dot SDK setup and configuration instructions for any credentials or device-specific requirements.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+https://www.halodot.io/
