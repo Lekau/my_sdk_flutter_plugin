@@ -25,13 +25,13 @@ final demoStock = [
     price: 0.50,
     description: 'Description for Item 4',
     icon: Icons.shopping_cart,
-  ), 
+  ),
   Item(
     name: 'Chicken Drumsticks',
     price: 15.0,
     description: 'Description for Item 5',
     icon: Icons.shopping_cart,
-  ), 
+  ),
   Item(
     name: 'Takeaway Sauce',
     price: 25.0,

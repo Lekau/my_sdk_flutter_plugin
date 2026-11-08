@@ -13,22 +13,20 @@ class ItemListTile extends StatelessWidget {
     return ListTile(
       title: Text(item.name),
       subtitle: Text('R${item.price.toStringAsFixed(2)}'),
-      trailing:  ListenableBuilder(
+      trailing: ListenableBuilder(
         listenable: cart,
         builder: (context, _) {
-          final itemCount = cart.items
-              .where((i) => i.name == item.name)
-              .length;
+          final itemCount = cart.items.where((i) => i.name == item.name).length;
           return Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               if (itemCount > 0) ...[
-              IconButton(
-                icon: Icon(Icons.remove),
-                onPressed: () {
-                  cart.removeItem(item);
-                },
-              ),
+                IconButton(
+                  icon: Icon(Icons.remove),
+                  onPressed: () {
+                    cart.removeItem(item);
+                  },
+                ),
               ],
               Text('$itemCount'),
               IconButton(

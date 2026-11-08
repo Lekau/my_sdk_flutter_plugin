@@ -6,7 +6,12 @@ class Item {
   final String description;
   final IconData icon;
 
-  Item({required this.name, required this.price, required this.description, required this.icon});
+  Item({
+    required this.name,
+    required this.price,
+    required this.description,
+    required this.icon,
+  });
 
   factory Item.fromJson(Map<String, dynamic> json) {
     return Item(
@@ -26,5 +31,3 @@ class Item {
     };
   }
 }
-
-

@@ -1,13 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:my_sdk_flutter_plugin/data/demo_data.dart';
 import 'package:my_sdk_flutter_plugin/models/cart_model.dart';
+import 'package:my_sdk_flutter_plugin/permissions.dart';
 import 'package:my_sdk_flutter_plugin/presentation/components/item_list_tile.dart';
 import 'package:my_sdk_flutter_plugin/presentation/screens/checkout/checkout_screen.dart';
 
-class ItemsScreen extends StatelessWidget {
+class ItemsScreen extends StatefulWidget {
   final Cart cart;
 
   const ItemsScreen({super.key, required this.cart});
+
+  @override
+  State<ItemsScreen> createState() => _ItemsScreenState();
+}
+
+class _ItemsScreenState extends State<ItemsScreen> {
+  Cart get cart => widget.cart;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => checkPermissions());
+  }
 
   @override
   Widget build(BuildContext context) {

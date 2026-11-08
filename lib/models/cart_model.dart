@@ -7,13 +7,11 @@ class Cart extends ChangeNotifier {
 
   List<Item> get items => List.unmodifiable(_items);
 
-  double get subtotal =>
-      _items.fold(0, (total, item) => total + item.price);
+  double get subtotal => _items.fold(0, (total, item) => total + item.price);
 
   double get total => _priceOverride ?? subtotal;
 
   void addItem(Item item) {
-
     _items.add(item);
     print('Item added: ${item.name}');
     notifyListeners();
@@ -24,7 +22,7 @@ class Cart extends ChangeNotifier {
     print('Item removed: ${item.name}');
     notifyListeners();
   }
-  
+
   void applyDiscount(double discountAmount) {
     setPriceOverride(subtotal - discountAmount);
   }

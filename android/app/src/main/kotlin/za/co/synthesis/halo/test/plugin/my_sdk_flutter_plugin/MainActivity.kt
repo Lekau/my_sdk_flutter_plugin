@@ -1,5 +1,7 @@
 package za.co.synthesis.halo.test.plugin.my_sdk_flutter_plugin
 
-import io.flutter.embedding.android.FlutterActivity
+import za.co.synthesis.halo.sdkflutterplugin.HaloActivity
 
-class MainActivity : FlutterActivity()
+// HaloActivity hooks the Halo SDK into the activity lifecycle; without it,
+// SDK initialisation fails with NoAppContext.
+class MainActivity : HaloActivity()
