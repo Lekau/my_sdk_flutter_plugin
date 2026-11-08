@@ -1,0 +1,57 @@
+# Root .gitignore for Chevron Flutter/Dart monorepo
+# App/package-level .gitignore files handle most platform specifics.
+# This file focuses on root/workspace artifacts and cross-repo secrets.
+
+# OS and IDE files
+.DS_Store
+# Match contents (not the folder) so app-level .gitignore files can re-include
+# shared run configs such as .vscode/launch.json and .idea/runConfigurations/.
+**/.vscode/*
+**/.idea/*
+
+# Dart/Flutter workspace artifacts
+.dart_tool/
+.packages
+pubspec.lock
+# The workspace has one lockfile, at the root. Commit it so CI resolves the same
+# versions as everyone else.
+!/pubspec.lock
+build/
+coverage/
+.fvm/
+
+# Melos artifacts
+.melos_packages
+.melos_packages.json
+melos_*.iml
+
+# Logs
+*.log
+firebase-debug.log
+
+# Environment files
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Mobile signing keys and credentials
+**/key.properties
+**/*.jks
+**/*.keystore
+**/*.p8
+**/*.p12
+**/*.mobileprovision
+
+# Firebase and Google service config files
+**/google-services.json
+**/GoogleService-Info.plist
+
+# Common service account credential names
+**/service-account*.json
+**/serviceAccount*.json
+**/*-service-account.json
+
+# Per-app, per-flavor env files (see env/example.env)
+env/**/*.env
+!env/example.env
